@@ -1,0 +1,6 @@
+gui:
+  1:
+    slot: 0-10
+    item: kong
+repair: tool
+unbreak: buxiu
