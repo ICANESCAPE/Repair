@@ -29,14 +29,11 @@ public class GuiBuilder {
 
     private static void add() {
         List<Data> list = Config.getDatas();
-        Bukkit.getConsoleSender().sendMessage("测试list"+list);
         for (int i = 0; i < list.size(); i++) {
             String slots = list.get(i).getSlot();
             int slot;
             try {
                 slot = Integer.parseInt(slots);
-                Core.info("测试slot" + slot);
-                Core.info("测试item" + list.get(i).getItem());
                 inventory.setItem(slot, RepairUtil.toItem(list.get(i).getItem()));
             } catch (NumberFormatException e) {
                 for (int a = Integer.parseInt(slots.split(split)[0]); a < Integer.parseInt(slots.split(split)[1]); a++) {
