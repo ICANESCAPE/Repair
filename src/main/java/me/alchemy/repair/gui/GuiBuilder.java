@@ -1,12 +1,12 @@
 package me.alchemy.repair.gui;
 
-import me.alchemy.repair.Repair;
 import me.alchemy.repair.dto.Data;
 import me.alchemy.repair.file.Config;
 import me.alchemy.repair.util.RepairUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.sct.core.Core;
 
 import java.util.List;
 
@@ -21,25 +21,29 @@ public class GuiBuilder {
     private static final String split = "-";
 
     public static void build(Player player) {
-        add();
         inventory = Bukkit.createInventory(null, 45, RepairUtil.changeColor("&c&l装备修复"));
+        add();
         player.closeInventory();
         player.openInventory(inventory);
     }
 
     private static void add() {
         List<Data> list = Config.getDatas();
+        Bukkit.getConsoleSender().sendMessage("测试list"+list);
         for (int i = 0; i < list.size(); i++) {
             String slots = list.get(i).getSlot();
             int slot;
             try {
                 slot = Integer.parseInt(slots);
+                Core.info("测试slot" + slot);
+                Core.info("测试item" + list.get(i).getItem());
                 inventory.setItem(slot, RepairUtil.toItem(list.get(i).getItem()));
             } catch (NumberFormatException e) {
                 for (int a = Integer.parseInt(slots.split(split)[0]); a < Integer.parseInt(slots.split(split)[1]); a++) {
                     inventory.setItem(a, RepairUtil.toItem(list.get(i).getItem()));
                 }
             }
+            inventory.setItem(31, RepairUtil.toItem("queren"));
         }
     }
 }

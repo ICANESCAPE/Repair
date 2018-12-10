@@ -1,9 +1,9 @@
 package me.alchemy.repair.util;
 
-import com.qq245949795.aicore.Storage.ItemCache;
-import com.qq245949795.aicore.Util.FileTool;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
+
+import org.sct.core.file.FileTool;
 
 /**
  * @author SCT_Alchemy
@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 public class RepairUtil {
 
     public static ItemStack toItem(String name) {
-        return ItemCache.itemMap.get(name);
+        return FileTool.getItem(name);
     }
 
     public static String changeColor(String message) {

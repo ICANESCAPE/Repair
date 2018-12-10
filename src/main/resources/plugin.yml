@@ -3,3 +3,6 @@ version: ${project.version}
 main: me.alchemy.repair.Repair
 authors: [alchemy]
 description: use to repair item and set unbreakable
+commands:
+  repair:
+

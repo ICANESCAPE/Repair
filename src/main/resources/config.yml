@@ -1,6 +1,24 @@
+#GUI部分设置
 gui:
+  #无关紧要
   1:
-    slot: 0-10
-    item: kong
-repair: tool
+    #位置，如果是某一个位置，填写数字，多个请按照｛格子-格子｝的格式来写
+    slot: 0-11
+    #从SCT_Core的items.yml内读取
+    item: fenge
+  2:
+    slot: 12-15
+    item: fenge
+  3:
+    slot: 16-31
+    item: fenge
+  4:
+    slot: 32-45
+    item: fenge
+
+#修复石所需要的物品，从SCT_Core内读取
+repair: repair
+#镶嵌无法破坏Lore所需的物品，从SCT_Core内读取
 unbreak: buxiu
+#这是镶嵌后所添加的Lore
+unbreaklore: "&c无法破坏"
