@@ -16,6 +16,9 @@ gui:
     slot: 32-45
     item: fenge
 
+#这是一个辅助选项，你将需要放入被修复物品的那个格子位置和修复道具的物品格子位置填进去，用|分割
+BlankSlot: 10|12
+
 #修复石所需要的物品，从SCT_Core内读取
 repair: repair
 #镶嵌无法破坏Lore所需的物品，从SCT_Core内读取

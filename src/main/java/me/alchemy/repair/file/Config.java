@@ -19,6 +19,7 @@ public class Config extends FileUtil {
     private static Config config;
 
     public Config() { super(Repair.getInstance(), "config.yml"); }
+
     public static void reload() {
         config = new Config();
         if (config.get("unbreak") == null) {

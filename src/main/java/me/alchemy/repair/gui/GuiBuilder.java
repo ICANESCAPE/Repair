@@ -3,10 +3,10 @@ package me.alchemy.repair.gui;
 import me.alchemy.repair.dto.Data;
 import me.alchemy.repair.file.Config;
 import me.alchemy.repair.util.RepairUtil;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.sct.core.Core;
 
 import java.util.List;
 
